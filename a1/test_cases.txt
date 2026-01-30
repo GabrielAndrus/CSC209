@@ -1,0 +1,42 @@
+cd ~/CSC209/a1
+cat > test_cases.txt << 'EOF'
+1'. Test that the game doesn't break after one input.
+
+The input shows a simple 4x4 grid. The user then chooses one 0 cell to reveal. 
+The output shows that the game functions correctly after one input and reveals the appropriate cell.
+
+Files: test_1'input.txt, test_1'expected.txt
+
+2'. Test that revealing all non-mine cells results in a win.
+
+The input shows a simple 4x4 grid. The user reveals all non-mine cells and a "game won" 
+message is printed.
+
+Files: test_2'input.txt, test_2'expected.txt
+
+3'. Test that the game doesn't break after an input to a non-existent cell.
+
+The input shows a simple 5x5 grid. The user chooses to reveal cell (6, 6). Nothing should happen.
+
+Files: test_3'input.txt, test_3'expected.txt
+
+4. Test that revealing a cell with 4 adjacent mines displays 4 (and doesn't perform flood fill)
+
+The input shows a 3x3 grid. The user then reveals a cell with 4 adjacent mines. 
+We expect the number 4 to appear and no neighbor cells to change.
+
+Files: test_4input.txt, test_4expected.txt
+
+5. Test that flood fill works even for boundary cells.
+
+The input shows a 4x4 grid. The user reveals a cell with 0 adjacent mines. 
+All neighboring cells should display appropriately.
+
+Files: test_5input.txt, test_5expected.txt
+
+6. Test that revealing the same non-mine cell multiple times doesn't affect the game.
+
+The input shows a 3x3 grid. The user reveals the same cell three times in a row. 
+We expect that nothing occurs after the first call.
+
+Files: test_6input.txt, test_6expected.txt
